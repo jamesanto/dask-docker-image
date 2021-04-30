@@ -21,7 +21,7 @@ RUN conda install --yes \
     && find /opt/conda/lib/python*/site-packages/bokeh/server/static -type f,l -name '*.js' -not -name '*.min.js' -delete \
     && rm -rf /opt/conda/pkgs
 
-RUN /opt/conda/bin/pip install opencv-python
+RUN /opt/conda/bin/pip install opencv-python tensorflow
 
 COPY prepare.sh /usr/bin/prepare.sh
 
