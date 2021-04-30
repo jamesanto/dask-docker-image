@@ -25,6 +25,8 @@ RUN /opt/conda/bin/pip install opencv-python
 
 COPY prepare.sh /usr/bin/prepare.sh
 
+RUN chmod +x /usr/bin/prepare.sh
+
 RUN mkdir /opt/app
 
 ENTRYPOINT ["tini", "-g", "--", "/usr/bin/prepare.sh"]
